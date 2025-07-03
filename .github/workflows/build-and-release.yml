@@ -2,6 +2,10 @@ name: Manual Build and Release
 
 on:
   workflow_dispatch:
+    inputs:
+      tag_name:
+        description: '为版本创建一个标签, 例如: v1.0.0'
+        required: true
 
 jobs:
   build-and-release:
@@ -39,6 +43,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: vmqphp-release.zip
-          # 当您手动触发此工作流时，可以提供一个标签
-          # 如果不提供，它会以commit-sha为名创建一个草稿版本
+          # 此工作流需要一个标签才能创建 Release。
+          # 手动触发时必须提供 tag_name。
           tag_name: ${{ github.event.inputs.tag_name }} 
