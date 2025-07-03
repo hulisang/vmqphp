@@ -1,0 +1,44 @@
+name: Manual Build and Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2' # 根据 composer.json 使用兼容的PHP版本
+          extensions: mbstring, zip, pdo, mysql
+          tools: composer:v2
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install Dependencies
+        run: composer install --no-dev --no-interaction --prefer-dist
+
+      # - name: Run Unit Tests
+      #   run: php think test
+
+      - name: Create Release Package
+        run: zip -r vmqphp-release.zip . -x ".git/*" ".github/*" "*.zip"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: vmqphp-release.zip
+          # 当您手动触发此工作流时，可以提供一个标签
+          # 如果不提供，它会以commit-sha为名创建一个草稿版本
+          tag_name: ${{ github.event.inputs.tag_name }} 
