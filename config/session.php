@@ -14,13 +14,32 @@
 // +----------------------------------------------------------------------
 
 return [
-    'id'             => '',
-    // SESSION_ID的提交变量,解决flash上传跨域
-    'var_session_id' => '',
-    // SESSION 前缀
-    'prefix'         => 'think',
-    // 驱动方式 支持redis memcache memcached
-    'type'           => '',
-    // 是否自动开启 SESSION
-    'auto_start'     => true,
+    // 默认会话驱动
+    'default' => env('session.driver', 'file'),
+
+    // 会话驱动配置
+    'stores'  => [
+        'file' => [
+            // 驱动方式
+            'type'          => 'File',
+            'auto_start'    => true,
+            // 存储路径
+            'path'          => '',
+            // 过期时间（秒）
+            'expire'        => 86400,
+            // 前缀
+            'prefix'        => '',
+            // 使用传入的session_id
+            'use_trans_sid' => true,
+            // 不使用cookie
+            'use_cookies'   => true,
+            // 启用安全会话
+            'secure'        => false,
+            // Cookie参数
+            'cookie_domain' => '',
+            'cookie_path'   => '/',
+            'http_only'     => true,
+        ],
+        // 其它驱动配置
+    ],
 ];

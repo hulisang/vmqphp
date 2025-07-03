@@ -123,12 +123,23 @@
 
 $("#LAY_preview").load("main.html")
 
-$.post("getMenu",function (data) {
-    if (data == null || data == "" || data.code==-1) {
+$.post("index.php/getMenu",function (data) {
+    console.log("getMenu response:", data);
+    
+    if (data == null || data == "") {
+        console.log("getMenu response is empty");
         window.location.href = "index.html";
+        return;
     }
+    
+    if (data.code == -1) {
+        console.log("getMenu error:", data.msg);
+        window.location.href = "index.html";
+        return;
+    }
+    
     setTimeout(function () {
-        $.post("admin/index/checkUpdate",function (data) {
+        $.post("index.php/admin/index/checkUpdate",function (data) {
             if (data.code==1) {
 
                 layer.confirm(data.msg, {
@@ -140,7 +151,7 @@ $.post("getMenu",function (data) {
 
             }
         });
-    },2000);
+    },500);
 
 
     console.log(data);

@@ -1,4 +1,3 @@
-
 <style>
     .layui-table-cell {
         height: auto;
@@ -34,7 +33,7 @@
         myTable = table.render({
             elem: '#demo'
             ,height: 'full-130'
-            ,url: 'admin/index/getPayQrcodes'
+            ,url: 'index.php/admin/index/getPayQrcodes'
             ,where: {
                 type:2,
             }
@@ -59,7 +58,7 @@
 
                     layer.close(index);
                     //向服务端发送删除指令
-                    $.post("admin/index/delPayQrcode","id="+data.id,function (data) {
+                    $.post("index.php/admin/index/delPayQrcode","id="+data.id,function (data) {
                         if (data.code==1){
                             obj.del(); //删除对应行（tr）的DOM结构
                         }

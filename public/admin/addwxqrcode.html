@@ -1,4 +1,3 @@
-
 <style>
     .layui-table-cell {
         height: auto;
@@ -95,7 +94,7 @@
                         console.log(imgMsg);
 
                         if (imgMsg==""){
-                            $.post("qr-code/test.php","base64="+encodeURIComponent(img64.split(",")[1]),function (data) {
+                            $.post("index.php/qr-code/test.php","base64="+encodeURIComponent(img64.split(",")[1]),function (data) {
                                 console.log(data)
                                 if (!data.data) {
                                     data = JSON.parse(data);
@@ -142,7 +141,7 @@
             });
             return;
         }
-        $.post("admin/index/addPayQrcode","type=1&pay_url="+encodeURIComponent(obj[index].url)+"&price="+obj[index].money,function (data) {
+        $.post("index.php/admin/index/addPayQrcode","type=1&pay_url="+encodeURIComponent(obj[index].url)+"&price="+obj[index].money,function (data) {
             up(obj,index+1)
         });
     }

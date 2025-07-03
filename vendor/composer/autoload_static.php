@@ -7,137 +7,96 @@ namespace Composer\Autoload;
 class ComposerStaticInitb5c423b2e24d04d0c7be29748b433944
 {
     public static $files = array (
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '626dcc41390ebdaa619faa02d99943b0' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/customFunctions.php',
+        '9b552a3cc426e3287cc811caefa3cf53' => __DIR__ . '/..' . '/topthink/think-helper/src/helper.php',
+        '15ec93fa4ce4b2d53816a1a5f2c514e2' => __DIR__ . '/..' . '/topthink/think-validate/src/helper.php',
+        '7448f3465e10b5f033e4babb31eb0b06' => __DIR__ . '/..' . '/topthink/think-orm/src/helper.php',
+        '35fab96057f1bf5e7aba31a8a6d5fdde' => __DIR__ . '/..' . '/topthink/think-orm/stubs/load_stubs.php',
+        'a9ed0d27b5a698798a89181429f162c5' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/Common/customFunctions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         't' => 
         array (
-            'think\\composer\\' => 15,
+            'think\\' => 6,
         ),
         'a' => 
         array (
             'app\\' => 4,
         ),
-        'S' => 
+        'Z' => 
         array (
-            'Symfony\\Polyfill\\Ctype\\' => 23,
-            'Symfony\\Component\\PropertyAccess\\' => 33,
-            'Symfony\\Component\\OptionsResolver\\' => 34,
+            'Zxing\\' => 6,
         ),
-        'M' => 
+        'P' => 
         array (
-            'MyCLabs\\Enum\\' => 13,
+            'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
         ),
         'E' => 
         array (
             'Endroid\\QrCode\\' => 15,
         ),
+        'D' => 
+        array (
+            'DASPRiD\\Enum\\' => 13,
+        ),
+        'B' => 
+        array (
+            'BaconQrCode\\' => 12,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'think\\composer\\' => 
+        'think\\' => 
         array (
-            0 => __DIR__ . '/..' . '/topthink/think-installer/src',
+            0 => __DIR__ . '/..' . '/topthink/framework/src/think',
+            1 => __DIR__ . '/..' . '/topthink/think-orm/src',
+            2 => __DIR__ . '/..' . '/topthink/think-validate/src',
+            3 => __DIR__ . '/..' . '/topthink/think-container/src',
+            4 => __DIR__ . '/..' . '/topthink/think-helper/src',
         ),
         'app\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/application',
+            0 => __DIR__ . '/../..' . '/app',
         ),
-        'Symfony\\Polyfill\\Ctype\\' => 
+        'Zxing\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+            0 => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib',
         ),
-        'Symfony\\Component\\PropertyAccess\\' => 
+        'Psr\\SimpleCache\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/property-access',
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
-        'Symfony\\Component\\OptionsResolver\\' => 
+        'Psr\\Log\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/options-resolver',
+            0 => __DIR__ . '/..' . '/psr/log/src',
         ),
-        'MyCLabs\\Enum\\' => 
+        'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
         ),
         'Endroid\\QrCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/endroid/qr-code/src',
-            1 => __DIR__ . '/..' . '/endroid/qrcode/src',
         ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'B' => 
+        'DASPRiD\\Enum\\' => 
         array (
-            'BaconQrCode' => 
-            array (
-                0 => __DIR__ . '/..' . '/bacon/bacon-qr-code/src',
-            ),
+            0 => __DIR__ . '/..' . '/dasprid/enum/src',
+        ),
+        'BaconQrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bacon/bacon-qr-code/src',
         ),
     );
 
     public static $classMap = array (
-        'QrReader' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/QrReader.php',
-        'Zxing\\Binarizer' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/Binarizer.php',
-        'Zxing\\BinaryBitmap' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/BinaryBitmap.php',
-        'Zxing\\ChecksumException' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/ChecksumException.php',
-        'Zxing\\Common\\BitArray' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/BitArray.php',
-        'Zxing\\Common\\BitMatrix' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/BitMatrix.php',
-        'Zxing\\Common\\BitSource' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/BitSource.php',
-        'Zxing\\Common\\CharacterSetECI' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/CharacterSetEci.php',
-        'Zxing\\Common\\CharacterSetEci\\AbstractEnum\\AbstractEnum' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/AbstractEnum.php',
-        'Zxing\\Common\\DecoderResult' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/DecoderResult.php',
-        'Zxing\\Common\\DefaultGridSampler' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/DefaultGridSampler.php',
-        'Zxing\\Common\\DetectorResult' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/DetectorResult.php',
-        'Zxing\\Common\\Detector\\MathUtils' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/detector/MathUtils.php',
-        'Zxing\\Common\\Detector\\MonochromeRectangleDetector' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/detector/MonochromeRectangleDetector.php',
-        'Zxing\\Common\\GlobalHistogramBinarizer' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/GlobalHistogramBinarizer.php',
-        'Zxing\\Common\\GridSampler' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/GridSampler.php',
-        'Zxing\\Common\\HybridBinarizer' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/HybridBinarizer.php',
-        'Zxing\\Common\\PerspectiveTransform' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/PerspectiveTransform.php',
-        'Zxing\\Common\\Reedsolomon\\GenericGF' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/GenericGF.php',
-        'Zxing\\Common\\Reedsolomon\\GenericGFPoly' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/GenericGFPoly.php',
-        'Zxing\\Common\\Reedsolomon\\ReedSolomonDecoder' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/ReedSolomonDecoder.php',
-        'Zxing\\Common\\Reedsolomon\\ReedSolomonException' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/ReedSolomonException.php',
-        'Zxing\\FormatException' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/FormatException.php',
-        'Zxing\\GDLuminanceSource' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/GDLuminanceSource.php',
-        'Zxing\\IMagickLuminanceSource' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/IMagickLuminanceSource.php',
-        'Zxing\\LuminanceSource' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/LuminanceSource.php',
-        'Zxing\\NotFoundException' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/NotFoundException.php',
-        'Zxing\\PlanarYUVLuminanceSource' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/PlanarYUVLuminanceSource.php',
-        'Zxing\\Qrcode\\Decoder\\BitMatrixParser' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/BitMatrixParser.php',
-        'Zxing\\Qrcode\\Decoder\\DataBlock' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataBlock.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask000' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask001' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask010' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask011' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask100' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask101' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask110' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DataMask111' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php',
-        'Zxing\\Qrcode\\Decoder\\DecodedBitStreamParser' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DecodedBitStreamParser.php',
-        'Zxing\\Qrcode\\Decoder\\Decoder' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Decoder.php',
-        'Zxing\\Qrcode\\Decoder\\ECB' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Version.php',
-        'Zxing\\Qrcode\\Decoder\\ECBlocks' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Version.php',
-        'Zxing\\Qrcode\\Decoder\\ErrorCorrectionLevel' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/ErrorCorrectionLevel.php',
-        'Zxing\\Qrcode\\Decoder\\FormatInformation' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/FormatInformation.php',
-        'Zxing\\Qrcode\\Decoder\\Mode' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Mode.php',
-        'Zxing\\Qrcode\\Decoder\\Version' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Version.php',
-        'Zxing\\Qrcode\\Detector\\AlignmentPattern' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/AlignmentPattern.php',
-        'Zxing\\Qrcode\\Detector\\AlignmentPatternFinder' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/AlignmentPatternFinder.php',
-        'Zxing\\Qrcode\\Detector\\Detector' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/Detector.php',
-        'Zxing\\Qrcode\\Detector\\FinderPattern' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/FinderPattern.php',
-        'Zxing\\Qrcode\\Detector\\FinderPatternFinder' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/FinderPatternFinder.php',
-        'Zxing\\Qrcode\\Detector\\FinderPatternInfo' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/FinderPatternInfo.php',
-        'Zxing\\Qrcode\\QRCodeReader' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/qrcode/QRCodeReader.php',
-        'Zxing\\RGBLuminanceSource' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/RGBLuminanceSource.php',
-        'Zxing\\Reader' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/Reader.php',
-        'Zxing\\ReaderException' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/ReaderException.php',
-        'Zxing\\Result' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/Result.php',
-        'Zxing\\ResultPoint' => __DIR__ . '/..' . '/khanamiryan/qrcode-detector-decoder/lib/ResultPoint.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -145,7 +104,6 @@ class ComposerStaticInitb5c423b2e24d04d0c7be29748b433944
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb5c423b2e24d04d0c7be29748b433944::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb5c423b2e24d04d0c7be29748b433944::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb5c423b2e24d04d0c7be29748b433944::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitb5c423b2e24d04d0c7be29748b433944::$classMap;
 
         }, null, ClassLoader::class);

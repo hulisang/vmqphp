@@ -4,8 +4,6 @@ error_reporting(0);
 ini_set ('memory_limit', '256M');
 header("Content-type:text/html;charset=utf-8");
 
-session_start();
-
 if(!isset($_SESSION['think'])){
     echo "error";
     exit();

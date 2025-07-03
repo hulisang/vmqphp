@@ -9,6 +9,8 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+use think\facade\Route;
+
 Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
@@ -26,9 +28,14 @@ Route::any('getState','index/index/getState');
 Route::any('appHeart','index/index/appHeart');
 Route::any('appPush','index/index/appPush');
 
+// 添加调试心跳接口路由
+Route::any('debug_appHeart','index/index/debug_appHeart');
 
 Route::any('closeEndOrder','index/index/closeEndOrder');
 
+Route::get('getMain', 'admin/Index/getMain');
+
+Route::any('index/index/getReturn', 'index/Index/getReturnApi');
 
 return [
 
